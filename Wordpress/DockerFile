@@ -1,4 +1,4 @@
-FROM fedora
+FROM centos
 MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
 # Downloading Wordpress into Project Directory
