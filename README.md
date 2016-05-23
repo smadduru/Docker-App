@@ -3,6 +3,8 @@ Docker Database Driven Web-App (Apache,Mariadb,Wordpress)
 
 Created Docker files for Apache, Database and Wordpress which serves basic installation of all the packages related to them.
 
+To inspect docker containers ip ......docker inspect <container_name> | grep IP
+
 #Apache
 After installing SSL you can create a self signed certificate using following command :
 open ssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
