@@ -1,0 +1,28 @@
+FROM fedora
+
+MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
+
+
+# Install Web Server, PhpModules and SSL
+
+RUN dnf install httpd
+RUN dnf install php php-common php-mysql php-pdo php-gd php-mbstring
+RUN dnf install mod_ssl
+
+
+# Opening Ports 80 and 443 for http
+EXPOSE 80
+EXPOSE 443
+
+#Copy info.php
+COPY info.php /var/www/html/info.php
+
+
+
+#Run/Start Apache
+
+CMD sudo systemctl start httpd
+
+#Launching httpd on reboot
+
+CMD sudo systemctl enable httpd
