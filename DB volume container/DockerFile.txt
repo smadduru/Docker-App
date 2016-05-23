@@ -1,0 +1,11 @@
+FROM fedora
+
+MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
+
+# Making Volume available to other containers
+
+VOLUME /var/lib/mariadb
+
+# Keeping the container open
+
+ENTRYPOINT ["bash"]

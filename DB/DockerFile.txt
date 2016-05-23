@@ -1,0 +1,22 @@
+FROM fedora
+
+MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
+
+
+# Install Mariadb
+
+RUN dnf install mariadb-server mariadb
+
+
+
+# Opening Port 3306 for mariadb
+EXPOSE 3306
+
+
+#Run/Start Mariadb
+CMD sudo systemctl start mariadb.service
+
+#Launching on Reboot
+
+CMD sudo systemctl enable mariadb.service
+

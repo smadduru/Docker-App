@@ -1,0 +1,13 @@
+FROM fedora
+MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
+
+# Downloading Wordpress into Project Directory
+RUN mkdir /project
+RUN curl -L -O https://wordpress.org/latest.tar.gz 
+RUN tar -xzvf latest.tar.gz -C /project
+RUN rm -rf latest.tar.gz
+
+# TO connect to DB add wp-config.php
+ADD wp-config.php /project/wp-config.php
+RUN chmod 755 /project/wp-config.php
+
