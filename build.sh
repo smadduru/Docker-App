@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-docker build -t apache
+docker build -t apache .
 
-docker build -t mariadb
+docker build -t mariadb .
 
-dockerbuild -t mariadb_data
+dockerbuild -t mariadb_data .
 
-dockerbuild -t wordpress
+dockerbuild -t wordpress .
