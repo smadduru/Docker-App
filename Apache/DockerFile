@@ -1,13 +1,13 @@
-FROM fedora
+FROM centos
 
 MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
 
 # Install Web Server, PhpModules and SSL
 
-RUN dnf install httpd
-RUN dnf install php php-common php-mysql php-pdo php-gd php-mbstring
-RUN dnf install mod_ssl
+RUN yum install httpd
+RUN yum install php php-common php-mysql php-pdo php-gd php-mbstring
+RUN yum install mod_ssl
 
 
 # Opening Ports 80 and 443 for http
