@@ -1,11 +1,11 @@
-FROM fedora
+FROM centos
 
 MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
 
 # Install Mariadb
 
-RUN dnf install mariadb-server mariadb
+RUN yum install mariadb-server mariadb
 
 
 
