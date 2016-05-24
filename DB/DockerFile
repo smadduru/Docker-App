@@ -14,9 +14,7 @@ EXPOSE 3306
 
 
 #Run/Start Mariadb
-CMD sudo systemctl start mariadb.service
+ENTRYPOINT ["mariadb"]
 
-#Launching on Reboot
 
-CMD sudo systemctl enable mariadb.service
 
