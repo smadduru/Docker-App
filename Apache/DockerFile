@@ -21,8 +21,7 @@ COPY info.php /var/www/html/info.php
 
 #Run/Start Apache
 
-CMD sudo systemctl start httpd
+ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
-#Launching httpd on reboot
 
-CMD sudo systemctl enable httpd
+
