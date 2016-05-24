@@ -5,8 +5,9 @@ MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
 # Install Web Server, PhpModules and SSL
 
-RUN yum install httpd
-RUN yum install php php-common php-mysql php-pdo php-gd php-mbstring
+RUN apt-get update
+RUN apt-get install apache2
+RUN apt-get install php php-common php-mysql php-pdo php-gd php-mbstring
 RUN yum install mod_ssl
 
 
@@ -21,7 +22,7 @@ COPY info.php /var/www/html/info.php
 
 #Run/Start Apache
 
-ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 
 
