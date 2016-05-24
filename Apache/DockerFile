@@ -1,4 +1,4 @@
-FROM centos
+FROM ubuntu
 
 MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
