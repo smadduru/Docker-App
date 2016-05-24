@@ -1,11 +1,11 @@
-FROM centos
+FROM ubuntu
 
 MAINTAINER Shiva Chaitanya Madduru <smadduru@hawk.iit.edu>
 
 
 # Install Mariadb
 
-RUN yum install mariadb-server mariadb
+RUN apt-get install mariadb-server 
 
 
 
@@ -14,7 +14,7 @@ EXPOSE 3306
 
 
 #Run/Start Mariadb
-ENTRYPOINT ["mariadb"]
+ENTRYPOINT ["/usr/sbin/mysqld"]
 
 
 
